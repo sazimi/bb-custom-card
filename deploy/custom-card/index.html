@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>custom-card</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+  <bb-card title='Blackberries' description='Fresh from garden' src='https://goo.gl/zfhMKP'>
+    loading...
+  </bb-card>
+
+<!-- Polyfills for Browsers supporting
+         Custom Elements. Needed b/c we downlevel
+         to ES5. See: @webcomponents/custom-elements
+    -->
+    <script src="./native-shim.js"></script>
+
+    <!-- Polyfills for Browsers not supporting
+         Custom Elements. See: @webcomponents/custom-elements
+    -->
+    <script src="./custom-elements.min.js"></script>
+
+    <!-- Zone.js -->
+    <!--
+      Consider excluding zone.js when creating
+      custom Elements by using the noop zone.
+    -->
+    <script src="./zone.js"></script>
+
+    <!-- Rx -->
+    <script src="./rxjs.umd.js"></script>
+
+    <!-- Angular Packages -->
+    <script src="./core.umd.js"></script>
+    <script src="./common.umd.js"></script>
+    <script src="./platform-browser.umd.js"></script>
+    <script src="./elements.umd.js"></script>
+    <script type="text/javascript" src="custom-card.js"></script>
+</body>
+</html>
